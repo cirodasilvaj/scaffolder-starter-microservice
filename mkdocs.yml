@@ -1,0 +1,6 @@
+site_name: scaffolder-starter-microservice
+site_description: Documentation for scaffolder-starter-microservice microservice on Backstage IDP
+plugins:
+  - techdocs-core
+nav:
+  - Overview: index.md

@@ -1,0 +1,41 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: scaffolder-starter-microservice
+  description: Scaffolder starter microservice created from Backstage IDP
+  annotations:
+    github.com/project-slug: cirodasilvaj/scaffolder-starter-microservice
+    backstage.io/techdocs-ref: dir:.
+    sonarqube.org/project-key: scaffolder-starter-microservice
+    backstage.io/kubernetes-id: scaffolder-starter-microservice
+    backstage.io/kubernetes-namespace: apps-demo
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/metrics"
+    fluentd.io/destination: "loki"
+    grafana/dashboard-selector: "scaffolder-starter-microservice"
+    grafana/tag-selector: "service:scaffolder-starter-microservice"
+    grafana/overview-dashboard: "http://grafana.992382723408.realhandsonlabs.net/d/scaffolder-starter-microservice-dashboard"
+    argocd/app-name: scaffolder-starter-microservice
+  tags:
+    - microservice
+    - k8s
+    - sonarqube
+    - prometheus
+    - fluentd
+    - loki
+    - argocd
+  links:
+    - url: https://github.com/cirodasilvaj/scaffolder-starter-microservice
+      title: GitHub Source Code
+      icon: github
+    - url: http://grafana.992382723408.realhandsonlabs.net/d/scaffolder-starter-microservice-dashboard
+      title: Grafana Dashboard
+      icon: dashboard
+    - url: http://sonarqube.992382723408.realhandsonlabs.net/dashboard?id=scaffolder-starter-microservice
+      title: SonarQube Quality Gate
+      icon: check
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-team
+  system: kube-demo-2026
